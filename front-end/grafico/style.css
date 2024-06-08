@@ -117,9 +117,8 @@ header {
 }
 
 .table-body{
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
 }
 
 .table-header input {

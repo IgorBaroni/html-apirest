@@ -1,5 +1,5 @@
 function getData() {
-  fetch("http://192.168.13.130:5000/monitoramento")
+  fetch("http://127.0.0.1:5000/monitoramento")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
@@ -35,7 +35,7 @@ pesquisaInput.addEventListener("keypress", function (e) {
 });
 
 function getDataByDispositivo() {
-  fetch(`http://localhost:8000/monitoramento/${pesquisa}`)
+  fetch(`http://127.0.0.1:5000/monitoramento/${pesquisa}`)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
