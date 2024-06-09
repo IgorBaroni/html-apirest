@@ -43,7 +43,7 @@ function drawBarChart() {
 
     var options = {
       chart: {
-        title: "Gráfico Pizza - Totalização de Registro por Dispositivo",
+        title: "Gráfico Barras - Totalização de Registro por Dispositivo",
       },
       bars: "horizontal",
     };
@@ -62,7 +62,7 @@ function drawAreaChart(){
     var data = google.visualization.arrayToDataTable(arr);
 
     var options = {
-      title: 'Gráfico Pizza - Totalização de Registro por Dispositivo'
+      title: 'Gráfico Área - Totalização de Registro por Dispositivo'
     };
 
     var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
