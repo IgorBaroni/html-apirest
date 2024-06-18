@@ -117,8 +117,9 @@ header {
 }
 
 .table-body{
-  display: grid;
-  grid-template-columns: 30% 40% 30%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
 }
 
 .table-header input {
@@ -169,6 +170,10 @@ header {
 
 .sidebar-mobile a > svg {
   color: #444;
+}
+
+.link-icon:hover{
+  color: #941611;
 }
 
 @media screen and (min-width: 768px) {
