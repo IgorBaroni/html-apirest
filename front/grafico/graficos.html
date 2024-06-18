@@ -48,9 +48,15 @@
         <h3>Menu</h3>
         <hr class="sidebar-divisor" />
         <div class="item-menu">
-          <a href="../index.html" class="link-icon"><i class="fa-solid fa-house"></i> Home</a>
-          <a href="#" class="link-icon"><i class="fa-solid fa-chart-simple"></i> Gráficos</a>
-          <a href="#" class="link-icon"><i class="fa-solid fa-file"></i> Relatórios</a>
+          <a href="../index.html" class="link-icon"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+          <a href="#" class="link-icon"
+            ><i class="fa-solid fa-chart-simple"></i> Gráficos</a
+          >
+          <a href="#" class="link-icon"
+            ><i class="fa-solid fa-file"></i> Relatórios</a
+          >
           <a href="#" class="logout link-icon"
             ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
           >
@@ -62,11 +68,17 @@
           <h3>Menu</h3>
           <hr class="sidebar-divisor" />
           <div class="item-menu-mobile">
-            <a href="../index.html" class="link-icon"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="../index.html" class="link-icon"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
 
-            <a href="#" class="link-icon"><i class="fa-solid fa-chart-simple"></i> Gráficos</a>
+            <a href="#" class="link-icon"
+              ><i class="fa-solid fa-chart-simple"></i> Gráficos</a
+            >
 
-            <a href="#" class="link-icon"><i class="fa-solid fa-file"></i> Relatórios</a>
+            <a href="#" class="link-icon"
+              ><i class="fa-solid fa-file"></i> Relatórios</a
+            >
 
             <a href="#" class="link-icon"
               ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
@@ -90,9 +102,43 @@
           </div>
           <br />
           <div class="table-body">
-            <div id="piechart" style="width: 300px"></div>
-            <div id="barchart_material" style="width: 400px;"></div>
-            <div id="chart_div" style="width: 300px;"></div>
+            <div class="grafico-container">
+              <div class="grafico">
+                <p>1 - Gráficos de Totalização de Registros Geral</p>
+                 <iframe src="../charts/graficopizza/graficopizza.html" frameborder="0"></iframe>
+              </div>
+              <div class="medicoes">
+                <p>Últimas 20 medições:</p>
+              </div>
+            </div>
+            <div class="grafico-container">
+              <div class="grafico">
+                <p>2 - Gráficos de Totalização de Registros Geral</p>
+                <!-- <div id="measurer" style="width: 300px;"></div> -->
+                <iframe src="../charts/graficomedidor/graficomedidor.html" frameborder="0"></iframe>
+              </div>
+              <div class="medicoes">
+                <p>Últimas 20 medições:</p>
+              </div>
+            </div>
+            <div class="grafico-container">
+              <div class="grafico">
+                <p>3 - Gráficos de Totalização de Registros Geral</p>
+                <iframe src="../charts/graficobarra/graficobarra.html" frameborder="0"></iframe>
+              </div>
+              <div class="medicoes">
+                <p>Últimas 20 medições:</p>
+              </div>
+            </div>
+            <div class="grafico-container">
+              <div class="grafico">
+                <p>4 - Gráficos de Totalização de Registros Geral</p>
+                <iframe src="../charts/graficolinhas/graficolinhas.html" frameborder="0"></iframe>
+              </div>
+              <div class="medicoes">
+                <p>Últimas 20 medições:</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

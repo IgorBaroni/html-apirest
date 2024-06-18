@@ -117,8 +117,34 @@ header {
 }
 
 .table-body{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.grafico-container{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #000;
+  background-color: #9b9b9b;
+  padding: 20px 20px;
+  border-radius: 20px;
   display: grid;
-  grid-template-columns: 30% 40% 30%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grafico-container .grafico iframe{
+  height: 220px;
+}
+
+.grafico-container p{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.grafico-container .medicoes{
+  display: flex;
 }
 
 .table-header input {
