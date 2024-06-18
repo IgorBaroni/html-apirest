@@ -131,10 +131,12 @@ header {
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 .grafico-container .grafico iframe{
   height: 220px;
+  width: 400px;
 }
 
 .grafico-container p{

@@ -39,10 +39,37 @@ def create_app(config_name):
         result = "Ola mundo"
         return result
     
-    @app.route('/monitoramento/grafico1', methods=['GET'])
-    def TotalizacaoRegistro():
+    @app.route('/monitoramento/graficopizza', methods=['GET'])
+    def TotalizacaoRegistroGraficoPizza():
        conn = db_connect.connect()
        query = conn.execute(text('SELECT dispositivo, COUNT(dispositivo) as TotalRegistros FROM monitoramento GROUP BY dispositivo limit 10'))
+       conn.commit()
+       result = [dict(zip(tuple(query.keys()), i)) for i in query.cursor]
+       conn.close()
+       return jsonify(result)
+    
+    @app.route('/monitoramento/graficobarra', methods=['GET'])
+    def TotalizacaoRegistroGraficoBarra():
+       conn = db_connect.connect()
+       query = conn.execute(text('SELECT dispositivo, COUNT(dispositivo) as TotalRegistros FROM monitoramento GROUP BY dispositivo limit 10'))
+       conn.commit()
+       result = [dict(zip(tuple(query.keys()), i)) for i in query.cursor]
+       conn.close()
+       return jsonify(result)
+    
+    @app.route('/monitoramento/graficolinhas', methods=['GET'])
+    def TotalizacaoRegistroGraficoLinhas():
+       conn = db_connect.connect()
+       query = conn.execute(text('SELECT dispositivo, COUNT(dispositivo) as TotalRegistros FROM monitoramento GROUP BY dispositivo limit 10'))
+       conn.commit()
+       result = [dict(zip(tuple(query.keys()), i)) for i in query.cursor]
+       conn.close()
+       return jsonify(result)
+    
+    @app.route('/monitoramento/graficomedidor', methods=['GET'])
+    def TotalizacaoRegistroGraficoMedidor():
+       conn = db_connect.connect()
+       query = conn.execute(text('SELECT temperatura, umidade, luminosidade FROM monitoramento limit 3'))
        conn.commit()
        result = [dict(zip(tuple(query.keys()), i)) for i in query.cursor]
        conn.close()

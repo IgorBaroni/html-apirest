@@ -2,10 +2,9 @@ let arr = [];
 arr.push(["Dispositivo", "Total"]);
 
 function getData() {
-  fetch("http://127.0.0.1:5000/monitoramento/grafico1")
+  fetch("http://127.0.0.1:5000/monitoramento/graficolinhas")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       for (let i = 0; i <= 4; i++) {
         let element = [data[i].dispositivo, data[i].TotalRegistros];
         arr.push(element);

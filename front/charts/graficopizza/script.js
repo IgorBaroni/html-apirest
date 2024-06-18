@@ -2,7 +2,7 @@ let arr = [];
 arr.push(["Dispositivo", "Total"]);
 
 function getData() {
-  fetch("http://127.0.0.1:5000/monitoramento/grafico1")
+  fetch("http://127.0.0.1:5000/monitoramento/graficopizza")
     .then((response) => response.json())
     .then((data) => {
       for (let i = 0; i <= 4; i++) {
