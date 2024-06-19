@@ -5,7 +5,6 @@ function getData() {
   fetch("http://127.0.0.1:5000/monitoramento/graficomedidor")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       arr.push(
         ["Temperatura", parseFloat(data[0].temperatura)],
         ["Umidade", parseFloat(data[0].umidade)],
