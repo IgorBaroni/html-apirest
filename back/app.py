@@ -69,7 +69,7 @@ def create_app(config_name):
     @app.route('/monitoramento/graficomedidor', methods=['GET'])
     def TotalizacaoRegistroGraficoMedidor():
        conn = db_connect.connect()
-       query = conn.execute(text('SELECT AVG(temperatura) AS temperatura, AVG(umidade) AS umidade, AVG(luminosidade) AS luminosidade FROM monitoramento limit 3'))
+       query = conn.execute(text('SELECT AVG(temperatura) AS temperatura, AVG(umidade) AS umidade, AVG(luminosidade) AS luminosidade FROM monitoramento'))
        conn.commit()
        result = [dict(zip(tuple(query.keys()), i)) for i in query.cursor]
        conn.close()

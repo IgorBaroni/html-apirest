@@ -23,16 +23,6 @@ function getData() {
     .catch((error) => console.error("Erro ao obter dados:", error));
 }
 
-let pesquisaInput = document.getElementById("inputPesquisa");
-
-pesquisaInput.addEventListener("keypress", function (e) {
-  if (e.key === "Enter") {
-    pesquisa = e.target.value;
-    console.log(pesquisa);
-    getDataByDispositivo();
-  }
-});
-
 function getDataByDispositivo() {
   fetch(`http://127.0.0.1:5000/monitoramento/${pesquisa}`)
     .then((response) => response.json())
@@ -57,11 +47,5 @@ function getDataByDispositivo() {
     })
     .catch((error) => console.error("Erro ao obter dados:", error));
 }
-
-pesquisaInput.addEventListener("input", function (e) {
-  if (!e.target.value.trim()) {
-    window.location.reload();
-  }
-});
 
 getData();
